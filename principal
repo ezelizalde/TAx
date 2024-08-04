@@ -1,0 +1,15 @@
+# pip install openai==0.28
+
+# import openai
+# openai.api_key = ""
+
+# Codigo Python
+def valorar_propiedad(tipo, zona, metros, caracteristicas):
+    prompt = f"En Vaca Muerta, el mercado inmobiliario se caracteriza por su alta rentabilidad. Calcula el valor por metro cuadrado de una {tipo} ubicada en la zona de {zona} de Vaca Muerta, con {metros} metros cuadrados y las siguientes características: {caracteristicas}. "
+    context = "Tu conocimiento sobre el mercado inmobiliario de Vaca Muerta es extenso. Puedes acceder a una base de datos actualizada con precios de propiedades."
+    result = nlp(question=prompt, context=context)
+    return result['respuesta']
+
+# Ejemplo
+valor = valorar_propiedad("casa", "Neuquén", 100, "buena vista, jardín")
+print(valor)
